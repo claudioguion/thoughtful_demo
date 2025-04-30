@@ -11,7 +11,7 @@ The sort function definition is the same as in the problem description, so that 
  - length:float
  - mass: float
 
-The output of the function will be a string, classifying the package into one of this categories:
+The output of the function will be a string, classifying the package into one of these categories:
  - STANDARD
  - SPECIAL
  - REJECTED
