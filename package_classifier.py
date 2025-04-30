@@ -27,7 +27,7 @@ def bulk_evaluator(width:float, height:float, length:float):
         print(f"SizeEvaluatorException: {err}")
         return False
 
-    if result >= VOLUME_LIMIT:
+    if result >= VOLUME_LIMIT or result <= 0:
         return False
 
     return True
@@ -36,7 +36,7 @@ def bulk_evaluator(width:float, height:float, length:float):
 def weight_evaluator(mass:float):
     # True: Light
     # False: Heavy
-    if mass >= MASS_LIMIT:
+    if mass >= MASS_LIMIT or mass <= 0:
         return False
 
     return True
