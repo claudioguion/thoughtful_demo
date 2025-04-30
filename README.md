@@ -19,4 +19,5 @@ The output of the function will be a string, classifying the package into one of
 At the top of the file, the configurations are declared as global constants (for maintainability).
 
 I also included a TEST config (currently set to True), because I wanted to showcase the functionality
-of the feature using the doctest module. The config can be set to FALSE in order turn off the testmods.
+of the feature using the doctest module. The config can be set to FALSE in order turn off the testmods
+for manual testing.
