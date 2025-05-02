@@ -67,7 +67,21 @@ def sort(width:float, height:float, length:float, mass:float):
 
     weight_eval = weight_evaluator(mass=mass)
 
-    return "STANDARD" if size_eval * weight_eval == 1 else "REJECTED" if True not in [size_eval, weight_eval] else "SPECIAL"
+    evaluations = {
+        "size": size_eval,
+        "weight": weight_eval,
+    }
+
+    if all(evaluations.values()) is True:
+        # All True
+        return "STANDARD"
+    elif any(evaluations.values()) is True:
+        # Should we need to add more evaluations in the future,
+        # We can handle them here
+        return "SPECIAL"
+    else:
+        # All False
+        return "REJECTED"
 
 
 if TEST is True:
